@@ -1,0 +1,59 @@
+@import 'assets/sass/colors';
+
+.container-card {
+  position: relative;
+  width: 250px;
+  margin-top: 30%;
+  padding: 30% 20px 8px;
+  box-sizing: border-box;
+  
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid $greylight;
+
+  &:hover{
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .container-card-image {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    
+    width: 50%;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container-card-content {
+    text-align: center;
+
+    .container-text {
+      .card-title {
+        margin-top: 15px;
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+        font-stretch: normal;
+        text-transform: uppercase;
+        letter-spacing: -0.2px;
+      }
+
+      .card-author {
+        margin: 8px auto;
+        overflow: hidden;
+        font-size: 15px;
+        line-height: 1.47;
+        letter-spacing: normal;
+        color: grey;
+      }
+    }
+  }
+}
+
