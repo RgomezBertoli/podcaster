@@ -7,11 +7,14 @@ import Card from "components/podcast-card";
 import Searcher from "components/searcher";
 
 import "./style.scss";
+import { useLoaderContext } from "contexts/loader-context";
 
 const PodcastList = () => {
+  const navigate = useNavigate();
+  const { setLoader } = useLoaderContext();
+
   const [list, setList] = useState([]);
   const [searchText, setSearch] = useState("");
-  const navigate = useNavigate();
 
   const viewList = useMemo(() => {
     if (searchText) {
@@ -27,11 +30,14 @@ const PodcastList = () => {
 
   useEffect(() => {
     const load = async () => {
+      setLoader(true);
       try {
         const listAux = await getListConfiguration();
         setList(listAux.feed.entry);
       } catch {
         setList([]);
+      } finally {
+        setLoader(false);
       }
     };
     load();
