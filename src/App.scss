@@ -1,10 +1,5 @@
-@import "./assets/sass/colors.scss";
+@import "assets/sass/_colors.scss";
 
-.App{
-  margin: 20px 60px;
-  > h1{
-    color: $blue;
-    padding-bottom: 10px;
-    border-bottom: 1px $greylight solid; 
-  }
+.content {
+  padding: 24px 16px;
 }

@@ -1,11 +1,11 @@
-@import 'assets/sass/colors';
+@import 'assets/sass/_colors';
 
 .container-card {
   position: relative;
-  width: 250px;
-  margin-top: 30%;
-  padding: 30% 20px 8px;
+  margin-top: 15%;
+  padding: 20% 20px 8px;
   box-sizing: border-box;
+  
   
   cursor: pointer;
   text-align: left;
@@ -24,7 +24,7 @@
     left: 50%;
     transform: translate(-50%, -35%);
     
-    width: 50%;
+    width: 30%;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,21 +37,17 @@
       .card-title {
         margin-top: 15px;
         color: black;
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 12px;
         line-height: 1.25;
-        font-stretch: normal;
+        font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: -0.2px;
       }
 
       .card-author {
         margin: 8px auto;
-        overflow: hidden;
-        font-size: 15px;
-        line-height: 1.47;
-        letter-spacing: normal;
         color: grey;
+        font-size: 10px;
+        line-height: 1.47;
       }
     }
   }

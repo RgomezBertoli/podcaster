@@ -1,0 +1,14 @@
+@import "assets/sass/_colors.scss";
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px $greylight solid;
+  padding: 16px;
+
+  &__title {
+    margin: 0;
+    color: $blue;
+    font-size: 24px;
+  }
+}

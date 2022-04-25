@@ -1,0 +1,18 @@
+@import "assets/sass/colors";
+
+.searcher {
+  display: flex;
+  align-items: center;
+  width: auto;
+
+  &__total {
+    color: white;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 2px;
+    background-color: $blue;
+    padding: 4px;
+
+    margin-right: 8px;
+  }
+}
