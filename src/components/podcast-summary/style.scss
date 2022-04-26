@@ -1,0 +1,45 @@
+@import "assets/sass/_colors.scss";
+
+.podcast-summary {
+  border: 1px solid $greylight;
+
+  &__image-container {
+    padding: 16px 24px;
+    border-bottom: 1px solid $greylight;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__author {
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  &__authority {
+    padding: 16px 24px 8px;
+    border-bottom: 1px solid $greylight;
+  }
+
+  &__description-cnt {
+    padding: 16px 24px 8px;
+  }
+
+  &__description-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 12px;
+    font-style: italic;
+  }
+}

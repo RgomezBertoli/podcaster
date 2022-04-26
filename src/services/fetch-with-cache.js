@@ -1,11 +1,4 @@
-const DAY_IN_MILIS = 24 * 60 * 60 * 1000;
-
-function hasExpired(date){
-  const now = Date.now();
-  const diff = now - date
-
-  return diff > DAY_IN_MILIS;
-}
+import { hasExpired } from "utils/has-expired";
 
 export async function getWithCache(url){
   const storedObject = localStorage.getItem(url);
@@ -15,10 +8,11 @@ export async function getWithCache(url){
     return cachedObject.value;
   }
 
-  const response = await fetch(url);
+  const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
   const json = await response.json();
+  const content = JSON.parse(json.contents);
 
-  localStorage.setItem(url, JSON.stringify({date: Date.now(), value: json}));
+  localStorage.setItem(url, JSON.stringify({date: Date.now(), value: content}));
 
-  return json;
+  return content;
 }
