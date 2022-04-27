@@ -1,0 +1,19 @@
+.episode-detail {
+  padding: 24px 16px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 48px;
+  }
+
+  &__audio {
+    width: 100%;
+  }
+}

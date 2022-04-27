@@ -1,0 +1,46 @@
+@import "assets/sass/_colors";
+
+.episode-table {
+  width: 100%;
+
+  &__head-label {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  &__header {
+    border-bottom: 2px solid $greylight;
+  }
+
+  &__head-title {
+    width: calc(100% * 10 / 12);
+  }
+  &__head-date {
+    width: calc(100% / 12);
+  }
+  &__head-duration {
+    width: calc(100% / 12);
+  }
+
+  &__row {
+    margin: 8px 0;
+    border-bottom: 1px solid $greylight;
+   
+    &:nth-child(odd) {
+      background-color: rgb(241, 241, 241);
+    }
+
+    td {
+      padding: 8px;
+    }
+  }
+
+  &__row-label {
+    font-size: 14px;
+  }
+
+  &__row-title {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

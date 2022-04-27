@@ -1,7 +1,7 @@
 @import "assets/sass/_colors.scss";
 
 .podcast-summary {
-  border: 1px solid $greylight;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
 
   &__image-container {
     padding: 16px 24px;
@@ -10,18 +10,21 @@
   }
 
   &__image {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
   }
 
   &__title {
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
   }
 
   &__author {
     font-size: 14px;
     font-style: italic;
+    cursor: pointer;
   }
 
   &__authority {
@@ -30,7 +33,7 @@
   }
 
   &__description-cnt {
-    padding: 16px 24px 8px;
+    padding: 16px 16px 8px;
   }
 
   &__description-title {
