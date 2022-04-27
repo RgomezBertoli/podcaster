@@ -10,14 +10,20 @@ export default async function fetchXMLWithCache(url) {
     return cachedObject.value;
   }
   let parser = new Parser();
-  const content = await parser.parseURL(
-    `https://api.allorigins.win/raw?url=${url}`
-  );
-
-  localStorage.setItem(
-    url,
-    JSON.stringify({ date: Date.now(), value: content })
-  );
-
-  return content;
+  try {
+    const content = await parser.parseURL(
+      `https://api.allorigins.win/raw?url=${url}`
+    );
+    try {
+      localStorage.setItem(
+        url,
+        JSON.stringify({ date: Date.now(), value: content })
+      );
+    } catch (e) {
+      console.error("CACHE IS FULL, NEED TO EMPTY IT TO CONTINUING CACHING");
+    }
+    return content;
+  } catch (e) {
+    console.error("XML WRONG FORMAT");
+  }
 }
